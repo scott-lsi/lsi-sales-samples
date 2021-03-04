@@ -19,28 +19,4 @@ class ProductController extends Controller
     {
         return view('product.personaliser', compact('product', 'ref', 'rowId'));
     }
-
-    /**
-     * Custom Gateway External Pricing API
-     * 
-     * @param  int $id
-     * @return string
-     */
-    public function getExternalPricingAPI($id){
-		$callback = $_GET['callback'];
-		$callback = preg_replace("/[^0-9a-zA-Z\$_]/", "", $callback); // XSS prevention
-		
-		$product = Product::find($id);
-		
-		$epaArray = [
-			'price' => 0,
-			'name' => $product->name,
-			'description' => $product->description,
-		];
-		$epaJson = json_encode($epaArray);
-		
-		header('Content-type: application/javascript'); // this was text/plain as per the docs, but on poshop digitalocean server it requires application/javascript in chrome
-		echo "{$callback}({$epaJson})";
-		exit;
-    }
 }

@@ -73,7 +73,6 @@ class Product extends Model
         }
         $iframeUrl .= '&r=2d-canvas';
         $iframeUrl .= '&a2c=postMessage';
-        $iframeUrl .= '&epa=' . rawurlencode(route('product.personaliser.epa', $this->id));
         $iframeUrl .= '&_usePs=1&_pav=3';
 
         return [
