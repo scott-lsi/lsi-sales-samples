@@ -1,0 +1,1 @@
+<img src="{{ asset('storage/products/' . $product_image->filename) }}" alt="{{ $product->name }} - {{ $product_image->sort_order }}" class="border rounded w-full p-1" data-id="{{ $product_image->id }}">
