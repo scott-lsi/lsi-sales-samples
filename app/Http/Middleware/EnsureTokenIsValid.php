@@ -21,7 +21,7 @@ class EnsureTokenIsValid
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() || Carbon::now() < Token::where('token', session('token')->token)->first()->expires){
+        if(Auth::check() || session()->has('token') && Carbon::now() < Token::where('token', session('token')->token)->first()->expires){
             return $next($request);
         }
         
