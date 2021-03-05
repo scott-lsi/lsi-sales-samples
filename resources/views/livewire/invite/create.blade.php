@@ -34,33 +34,34 @@
                         </div>
 
                         <div class="block font-semibold text-sm mb-2">Email</div>
-                        <div class="border rounded p-4 bg-gray-100">
+                        <div class="border rounded p-4 bg-white text-sm">
                             <div class="flex justify-center mb-4">
-                                <x-jet-application-logo width="120" />
+                                <img src="http://util.lsipower.co.uk/email/header/{{ strtolower(substr(env('SALESPERSON_FIRSTNAME'), 0, 1) . env('SALESPERSON_SURNAME')) }}header.png">
                             </div>
-                            
-                            <div class="bg-white p-4">
-                                <p class="mb-4">Dear @if($recipient_name){{ $recipient_name }},@endif</p>
 
-                                <p class="mb-4">Please click the button below to order your personalised samples.</p>
+                            <p class="mb-4">Dear @if($recipient_name){{ $recipient_name }},@endif</p>
 
-                                <div class="mb-4">
-                                    <label for="optional_message" class="sr-only">Optional Message</label>
-                                    <x-textarea wire:model.debounce.500ms="optional_message" name="optional_message" class="w-full font-mono" rows="5" />
-                                    @error('optional_message') <div class="mt-3 text-sm text-red-500">{{ $message }}</div> @enderror
-                                </div>
+                            <p class="mb-4">Please click the button below to order your personalised samples.</p>
 
-                                <div class="flex justify-center mb-8">
-                                    <span class="rounded px-3 py-2 bg-gray-900 text-white cursor-pointer">Visit the site</span>
-                                </div>
-
-                                <p class="mb-4">Kind regards,</p>
-                                <p class="mb-4">{{ env('SALESPERSON_FIRSTNAME') }} {{ env('SALESPERSON_SURNAME') }}</p>
-                                <p>
-                                    Email: <a href="mailto:{{ env('SALESPERSON_EMAIL') }}">{{ env('SALESPERSON_EMAIL') }}</a><br>
-                                    Phone: {{ env('SALESPERSON_PHONE') }}
-                                </p>
+                            <div class="mb-4">
+                                <label for="optional_message" class="sr-only">Optional Message</label>
+                                <x-textarea wire:model.debounce.500ms="optional_message" name="optional_message" class="w-full font-mono" rows="5" />
+                                @error('optional_message') <div class="mt-3 text-sm text-red-500">{{ $message }}</div> @enderror
                             </div>
+
+                            <div class="flex justify-center mb-8">
+                                <span class="rounded px-3 py-2 bg-gray-900 text-white cursor-pointer">Visit the site</span>
+                            </div>
+
+                            <p class="mb-4">Kind regards,</p>
+
+                            <p class="mb-4">
+                                {{ env('SALESPERSON_FIRSTNAME') }} {{ env('SALESPERSON_SURNAME') }}<br>
+                                {{ env('SALESPERSON_JOBTITLE') }}<br>
+                                DDi: {{ env('SALESPERSON_PHONE') }}<br>
+                                Main: 01274 852598<br>
+                                E-Mail: <a href="mailto:{{ env('SALESPERSON_EMAIL') }}">{{ env('SALESPERSON_EMAIL') }}</a>
+                            </p>
                         </div>
                     </div>
                 </div>
