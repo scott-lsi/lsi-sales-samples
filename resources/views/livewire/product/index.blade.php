@@ -1,5 +1,5 @@
 <div class="py-12">
-    @if(Auth::check() || session()->has('token') && Carbon::now() < Token::where('token', session('token')->token)->first()->expires){
+    @if(Auth::check() || session()->has('token') && Carbon::now() < Token::where('token', session('token')->token)->first()->expires)
         @push('pagetitle', 'Products')
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
