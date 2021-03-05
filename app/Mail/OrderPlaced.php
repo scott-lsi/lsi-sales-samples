@@ -32,6 +32,7 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.orders.placed');
+        return $this->markdown('emails.orders.placed')
+            ->subject('Sample Order Placed by ' . $this->order->name);
     }
 }

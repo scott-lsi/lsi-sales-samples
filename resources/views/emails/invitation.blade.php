@@ -11,9 +11,10 @@ Visit the site
 
 Kind regards,
 
-{{ env('SALESPERSON_FIRSTNAME') }} {{ env('SALESPERSON_SURNAME') }}
-
-Email: [{{ env('SALESPERSON_EMAIL') }}](mailto:{{ env('SALESPERSON_EMAIL') }})<br>
-Phone: {{ env('SALESPERSON_PHONE') }}
+{{ env('SALESPERSON_FIRSTNAME') }} {{ env('SALESPERSON_SURNAME') }}<br>
+{{ env('SALESPERSON_JOBTITLE') }}<br>
+DDi: {{ env('SALESPERSON_PHONE') }}<br>
+Main: 01274 852598<br>
+E-Mail: [{{ env('SALESPERSON_EMAIL') }}](mailto:{{ env('SALESPERSON_EMAIL') }})
 
 @endcomponent

@@ -18,7 +18,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 // home
-//Route::get('/', App\Http\Livewire\Page\Show::class)->name('home');
 Route::get('/', App\Http\Livewire\Product\Index::class)->name('home');
 
 // token check

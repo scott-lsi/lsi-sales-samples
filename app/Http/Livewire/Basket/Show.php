@@ -101,7 +101,6 @@ class Show extends Component
         $this->thanks .= '<p>Your order has been stored for approval.</p>';
 
         Mail::to(env('SALESPERSON_EMAIL'))
-            ->send(new OrderPlaced($order))
-            ->subject('Sample Order Placed by ' . $this->name);
+            ->send(new OrderPlaced($order));
     }
 }

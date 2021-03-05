@@ -32,8 +32,7 @@ class Create extends Component
         $token->save();
 
         Mail::to($this->recipient_email_address)
-            ->send(new Invitation($this->recipient_name, $this->optional_message, $token))
-            ->subject('Personalised Samples');
+            ->send(new Invitation($this->recipient_name, $this->optional_message, $token));
 
         session()->flash('flash.banner', 'Invite sent to ' . $this->recipient_name . ' (' . $this->recipient_email_address . ')');
         session()->flash('flash.bannerStyle', 'success');

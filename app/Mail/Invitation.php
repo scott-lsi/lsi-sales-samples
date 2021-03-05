@@ -36,6 +36,7 @@ class Invitation extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.invitation');
+        return $this->markdown('emails.invitation')
+            ->subject('Personalised Samples');
     }
 }
