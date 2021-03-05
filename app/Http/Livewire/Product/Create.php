@@ -60,8 +60,8 @@ class Create extends Component
         $this->sku = '';
         $this->description = '';
         $this->gateway_id = '';
-        $this->gateway_dropship_id = '';
-        $this->gateway_config = '';
+        $this->gateway_dropship_id = null;
+        $this->gateway_config = null;
 
         session()->flash('flash.banner', 'Product created!');
         session()->flash('flash.bannerStyle', 'success');

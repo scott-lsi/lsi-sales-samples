@@ -14,7 +14,7 @@
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <x-jet-nav-link href="{{ route('product.index') }}" :active="request()->routeIs('product.index')">
+                <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                     {{ __('Products') }}
                 </x-jet-nav-link>
 
@@ -286,7 +286,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('product.index') }}" :active="request()->routeIs('product.index')">
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                 {{ __('Products') }}
             </x-jet-responsive-nav-link>
         </div>

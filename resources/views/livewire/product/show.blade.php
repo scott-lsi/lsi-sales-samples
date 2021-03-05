@@ -38,7 +38,7 @@
 
             <hr class="my-4">
 
-            <x-back-link href="{{ route('product.index') }}">Return to the product list</x-back-link>
+            <x-back-link href="{{ route('home') }}">Return to the homepage</x-back-link>
         </div>
     </div>
 </div>
