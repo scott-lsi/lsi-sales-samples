@@ -24,8 +24,22 @@ class Create extends Component
         return view('livewire.invite.create');
     }
 
+    public function updated($field)
+    {
+        // validate on update
+        $this->validateOnly($field, [
+            'recipient_name' => 'required',
+            'recipient_email_address' => 'required',
+        ]);
+    }
+
     public function create()
     {
+        $this->validate([
+            'recipient_name' => 'required',
+            'recipient_email_address' => 'required',
+        ]);
+
         $token = new Token;
         $token->token = Str::uuid();
         $token->expires = Carbon::now()->addDays(7)->toDateTimeString();
