@@ -13,6 +13,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <h1 class="text-3xl mb-4">{{ $tableTitle }}</h1>
 
+            <p class="mb-4">
+                <x-link-button wire:click="currentProducts" class="mr-4">Show current products</x-link-button>
+                <x-link-button wire:click="deletedProducts" class="mr-4">Show deleted products</x-link-button>
+                <x-link-button href="{{ route('product.create') }}">Create Product</x-link-button>
+            </p>
+
             <table class="w-full table-auto mb-4">
                 <thead>
                     <tr class="border-b">
@@ -27,7 +33,7 @@
                         <tr class="border-b">
                             <td class="py-4"><img src="{{ asset('storage/products/' . $product->main_product_image) }}" class="w-24"></td>
                             <td class="py-4">
-                                <a href="{{ route('product.show', $product) }}">{{ $product->name }}</a>
+                                <a href="{{ route('product.personaliser', $product) }}">{{ $product->name }}</a>
                             </td>
                             <td class="py-4">{{ $product->sku }}</td>
                             <td class="py-4">
@@ -43,17 +49,6 @@
                     @endforeach
                 </tbody>
             </table>
-
-            <p class="mb-4">
-                <x-link-button wire:click="currentProducts" class="mr-4">Show current products</x-link-button>
-                <x-link-button wire:click="deletedProducts">Show deleted products</x-link-button>
-            </p>
-
-            <hr class="mb-4">
-            
-            <p>
-                <x-link-button href="{{ route('product.create') }}">Create Product</x-link-button>
-            </p>
         </div>
     </div>
 </div>

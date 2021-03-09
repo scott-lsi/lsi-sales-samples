@@ -13,6 +13,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <h1 class="text-3xl mb-4">{{ $tableTitle }}</h1>
 
+            <p class="mb-4">
+                <x-link-button wire:click="allOrders" class="mr-4">Show all orders</x-link-button>
+                <x-link-button wire:click="unsubmittedOrders" class="mr-4">Show unsubmitted orders</x-link-button>
+                <x-link-button wire:click="submittedOrders" class="mr-4">Show submitted orders</x-link-button>
+                <x-link-button wire:click="deletedOrders">Show deleted orders</x-link-button>
+            </p>
+
             <table class="w-full table-auto mb-4">
                 <thead>
                     <tr class="border-b">
@@ -27,7 +34,9 @@
                     @foreach($orders as $order)
                         <tr class="border-b">
                             <td class="py-4">
-                                <a href="{{ route('order.show', $order) }}">{{ $order->name }} ({{ $order->company }})</a>
+                                {{ $order->name }}
+                                <br>{{ $order->company }}
+                                @if($order->phone)<br>{{ $order->phone }}@endif
                             </td>
                             <td class="py-4">
                                 @if($order->submitted_to_gateway)
@@ -46,10 +55,12 @@
                                     </svg>
                                 @endif
                             </td>
-                            <td class="py-4">{{ $order->created_at->format('jS F Y, H:i:s') }}</td>
+                            <td class="py-4">
+                                {!! $order->created_at->format('jS F Y\<\b\r\>H:i:s') !!}
+                            </td>
                             <td class="py-4">
                                 @if($order->created_at != $order->updated_at)
-                                    {{ $order->updated_at->format('jS F Y, H:i:s') }}
+                                    {!! $order->updated_at->format('jS F Y\<\b\r\>H:i:s') !!}
                                 @else
                                     Never Updated
                                 @endif
@@ -69,13 +80,6 @@
                     @endforeach
                 </tbody>
             </table>
-
-            <p class="mb-4">
-                <x-link-button wire:click="allOrders" class="mr-4">Show all orders</x-link-button>
-                <x-link-button wire:click="unsubmittedOrders" class="mr-4">Show unsubmitted orders</x-link-button>
-                <x-link-button wire:click="submittedOrders" class="mr-4">Show submitted orders</x-link-button>
-                <x-link-button wire:click="deletedOrders">Show deleted orders</x-link-button>
-            </p>
         </div>
     </div>
 </div>

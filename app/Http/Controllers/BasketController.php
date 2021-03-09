@@ -74,9 +74,6 @@ class BasketController extends Controller
             // send the user a message
             session()->flash('flash.banner', 'Basket updated!');
             session()->flash('flash.bannerStyle', 'success');
-
-            // just return the url, not a redirect, as the window href is changed by the js in personaliser.blade.php
-            return route('basket.show');
         } else {
             // add the product
             Basket::add($product_to_add);
@@ -84,9 +81,8 @@ class BasketController extends Controller
             // send the user a message
             session()->flash('flash.banner', $custom_gateway_data['quantity'] . ' x ' . $product->name . ' added to your basket');
             session()->flash('flash.bannerStyle', 'success');
-
-            // just return the url, not a redirect, as the window href is changed by the js in personaliser.blade.php
-            return route('product.show', $product);
         }
+
+        return route('basket.show');
     }
 }

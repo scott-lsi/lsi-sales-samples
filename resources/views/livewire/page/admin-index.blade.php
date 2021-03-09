@@ -13,6 +13,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <h1 class="text-3xl mb-4">{{ $tableTitle }}</h1>
 
+            <p class="mb-4">
+                <x-link-button wire:click="currentPages" class="mr-4">Show current pages</x-link-button>
+                <x-link-button wire:click="deletedPages" class="mr-4">Show deleted pages</x-link-button>
+                <x-link-button href="{{ route('page.create') }}">Create Page</x-link-button>
+            </p>
+
             <table class="w-full table-auto mb-4">
                 <thead>
                     <tr class="border-b">
@@ -50,17 +56,6 @@
                     @endforeach
                 </tbody>
             </table>
-
-            <p class="mb-4">
-                <x-link-button wire:click="currentPages" class="mr-4">Show current pages</x-link-button>
-                <x-link-button wire:click="deletedPages">Show deleted pages</x-link-button>
-            </p>
-
-            <hr class="mb-4">
-            
-            <p>
-                <x-link-button href="{{ route('page.create') }}">Create Page</x-link-button>
-            </p>
         </div>
     </div>
 </div>

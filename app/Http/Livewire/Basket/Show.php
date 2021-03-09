@@ -20,6 +20,7 @@ class Show extends Component
     public $subtotal;
     public $name;
     public $company;
+    public $phone;
     public $address_line_1;
     public $address_line_2;
     public $address_town;
@@ -83,6 +84,7 @@ class Show extends Component
         $order = new Order;
         $order->name = $this->name;
         $order->company = $this->company;
+        $order->phone = $this->phone;
         $order->address_line_1 = $this->address_line_1;
         $order->address_line_2 = $this->address_line_2;
         $order->address_town = $this->address_town;

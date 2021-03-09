@@ -18,7 +18,7 @@
                     <div class="w-1/3 mr-8">
                         <h1 class="font-normal text-xl mb-3">Product Information</h1>
                         <p class="text-gray-700 text-sm mb-3">The name and information of the product.</p>
-                        <p><x-link-button href="{{ route('product.show', $product) }}" class="px-3 py-2">View this product</x-link-button></p>
+                        <p><x-link-button href="{{ route('product.personaliser', $product) }}" class="px-3 py-2">View the personaliser</x-link-button></p>
                     </div>
 
                     <div class="w-2/3 bg-white rounded p-4">

@@ -47,6 +47,12 @@
                                 </div>
 
                                 <div class="mb-4">
+                                    <x-jet-label for="phone" class="font-semibold mb-2">Phone</x-jet-label>
+                                    <x-jet-input id="phone" type="text" wire:model.debounce.500ms="phone" name="phone" class="w-full" />
+                                    <x-jet-input-error for="phone" class="mt-2" />
+                                </div>
+
+                                <div class="mb-4">
                                     <x-jet-label for="address_line_1" class="font-semibold mb-2">Delivery Address Line 1 *</x-jet-label>
                                     <x-jet-input id="address_line_1" type="text" wire:model.debounce.500ms="address_line_1" name="address_line_1" class="w-full" />
                                     <x-jet-input-error for="address_line_1" class="mt-2" />

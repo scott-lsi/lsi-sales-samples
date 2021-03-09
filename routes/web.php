@@ -31,7 +31,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 });
 // product frontend
 Route::middleware(['token'])->group(function(){
-    Route::get('/product/{product}', App\Http\Livewire\Product\Show::class)->name('product.show');
     Route::get('/product/personaliser/epa/{id}', [App\Http\Controllers\ProductController::class, 'getExternalPricingAPI'])->name('product.personaliser.epa');
     Route::get('/product/personaliser/{product}/{ref?}/{rowId?}', [App\Http\Controllers\ProductController::class, 'personaliser'])->name('product.personaliser');
 });

@@ -7,7 +7,7 @@
             
             <div class="sm:grid sm:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach($products as $product)
-                    <a href="{{ route('product.show', $product) }}" class="block border rounded bg-white hover:shadow">
+                    <a href="{{ route('product.personaliser', $product) }}" class="block border rounded bg-white hover:shadow">
                         <img src="{{ asset('storage/products/' . $product->main_product_image) }}" class="w-full">
                         <div class="text-center font-bold my-4">{{ $product->name }}</div>
                     </a>

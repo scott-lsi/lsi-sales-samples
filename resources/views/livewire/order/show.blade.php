@@ -29,6 +29,11 @@
                         <dt class="font-bold">Company</dt>
                         <dd class="mb-4">{{ $order->company }}</dd>
                         
+                        @if($order->phone)
+                            <dt class="font-bold">Phone</dt>
+                            <dd class="mb-4">{{ $order->phone }}</dd>
+                        @endif
+                        
                         <dt class="font-bold">Delivery Address</dt>
                         <dd class="mb-4">
                             {{ $order->address_line_1 }}<br>
