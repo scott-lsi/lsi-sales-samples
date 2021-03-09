@@ -91,7 +91,57 @@
                     <x-info-box>Your basket is empty</x-info-box>
                 @endif
             @else
-                {!! $thanks !!}
+                <h1 class="text-3xl mt-4 mb-8">Thank You!</h1>
+
+                <p class="my-8">How easy was that? I'll get this sent out for you in the next few days and be in touch to make sure you got it.</p>
+
+                <hr class="mb-8">
+
+                <h2 class="text-2xl mb-8">What we do</h2>
+
+                <p class="text-xl mb-4">The reason I want to physically send something out for you is to try and show how we are different from the rest!</p>
+                <p class="text-xl mb-4">We are not just a catalogue or an online site... we are real people who you can have a real conversation with and love a real cuppa!</p>
+                <p class="text-xl mb-4">We offer so much more than just branded items, here's a few links to what we are all about</p>
+
+                <a href="https://www.lsi.co.uk"><img src="{{ asset('images/heroes.jpg') }}" alt="LSi Promotional Heroes"></a>
+
+                <div class="my-8 md:grid grid-cols-5">
+                    <div class="mb-4">
+                        <a href="https://www.lsi.co.uk/category/promotional-merchandise" class="block">
+                            <img src="{{ asset('images/logos/pm.png') }}" alt="Promotional Merchandise" class="w-auto h-24 mx-auto">
+                        </a>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <a href="https://www.lsi.co.uk/category/corporate-clothing" class="block">
+                            <img src="{{ asset('images/logos/cc.png') }}" alt="Corporate Clothing" class="w-auto h-24 mx-auto">
+                        </a>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <a href="https://www.lsi.co.uk/category/eco-friendly-products" class="block">
+                            <img src="{{ asset('images/logos/eco.png') }}" alt="Eco Friendly Products" class="w-auto h-24 mx-auto">
+                        </a>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <a href="https://www.lsi.co.uk/far-east-sourcing" class="block">
+                            <img src="{{ asset('images/logos/fes.png') }}" alt="Fer east Sourcing" class="w-auto h-24 mx-auto">
+                        </a>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <a href="https://www.lsi.co.uk/corporate-schemes" class="block">
+                            <img src="{{ asset('images/logos/cs.png') }}" alt="Corporate Schemes" class="w-auto h-24 mx-auto">
+                        </a>
+                    </div>
+                </div>
+
+                <p class="mb-4 text-center"><a href="https://www.lsi.co.uk/news/storage-fulfilment-distribution-feb21" class="block text-white rounded px-8 py-4 text-xl bg-pink-600 hover:bg-pink-700">Read our article on Storage, Fulfilment &amp; Distribution</a></p>
             @endif
         </div>
     </div>

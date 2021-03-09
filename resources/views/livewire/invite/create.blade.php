@@ -41,7 +41,7 @@
 
                             <p class="mb-4">Hi @if($recipient_name){{ $recipient_name }},@endif</p>
 
-                            <p class="mb-4">Hope you are well! I know you will get hundreds of emails trying to sell you merchandise and branded items but we are different... No really, we are! I want to stand out more than anyone else who might get in touch so I've had this web shop made especially for you to grab a free personalised notebook... from me. It's dead easy just click away and I'll get you one sent out in no time. Who doesn't love a freebie?</p>
+                            <p class="mb-4">Hope you are well! I know you will get hundreds of emails trying to sell you merchandise and branded items but we are different... No really, we are!</p>
 
                             <div class="mb-4">
                                 <label for="optional_message" class="sr-only">Optional Message</label>

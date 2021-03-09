@@ -12,7 +12,7 @@
         @include('partials.headerscripts')
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen container bg-white mx-auto shadow-2xl">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->

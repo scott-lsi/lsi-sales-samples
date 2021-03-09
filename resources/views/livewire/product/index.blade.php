@@ -7,7 +7,20 @@
         @push('pagetitle', 'Products')
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <h1 class="text-3xl mt-4 mb-8">Products</h1>
+            <div class="grid grid-cols-6 gap-8 mb-8 items-center p-2 md:p-0">
+                <div class="col-span-3 order-2 md:col-span-1 md:order-none">
+                    <img src="https://www.lsi.co.uk/imglib/about/team/photo/{{ strtolower(env('SALESPERSON_FIRSTNAME') . '_' . env('SALESPERSON_SURNAME')) }}.jpg" class="w-full rounded" alt="{{ strtolower(env('SALESPERSON_FIRSTNAME') . '_' . env('SALESPERSON_SURNAME')) }}">
+                </div>
+
+                <div class="col-span-6 md:col-span-4 order-1 md:order-none">
+                    <h1 class="text-3xl mt-4 mb-8 text-center">Welcome to my free, intro sample site</h1>
+                    <p class="text-2xl text-center mt-4 mb-8">In just 3 more clicks you will have a personalised notebook on its way to you wherever you want... who doesn't love a freebie?</p>
+                </div>
+                
+                <div class="col-span-3 order-3 md:col-span-1 md:order-none">
+                    <img src="https://www.lsi.co.uk/imglib/about/team/character/{{ strtolower(env('SALESPERSON_FIRSTNAME') . '_' . env('SALESPERSON_SURNAME')) }}.png" class="w-full" alt="{{ strtolower(env('SALESPERSON_FIRSTNAME') . '_' . env('SALESPERSON_SURNAME')) }} character">
+                </div>
+            </div>
             
             <div class="sm:grid sm:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach($products as $product)
