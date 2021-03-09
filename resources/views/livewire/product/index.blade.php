@@ -1,4 +1,7 @@
-<?php use Carbon\Carbon; ?>
+<?php
+    use Carbon\Carbon;
+    use App\Models\Token;
+?>
 <div class="py-12">
     @if(Auth::check() || session()->has('token') && Carbon::now() < Token::where('token', session('token')->token)->first()->expires)
         @push('pagetitle', 'Products')
