@@ -1,12 +1,12 @@
 @component('mail::message')
-Dear {{ $recipient_name }},
+Hi {{ $recipient_name }},
 
-Please click the button below to order your personalised samples.
+Hope you are well! I know you will get hundreds of emails trying to sell you merchandise and branded items but we are different... No really, we are! I want to stand out more than anyone else who might get in touch so I've had this web shop made especially for you to grab a free personalised notebook... from me. Its dead easy just click away and I'll get you one sent out in no time. Who doesn't love a freebie?
 
 {{ $optional_message }}
 
 @component('mail::button', ['url' => route('token.store_to_session', $token)])
-Visit the site
+Click here, claim now...
 @endcomponent
 
 Kind regards,

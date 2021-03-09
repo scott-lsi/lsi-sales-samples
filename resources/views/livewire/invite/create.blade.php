@@ -39,9 +39,9 @@
                                 <img src="http://util.lsipower.co.uk/email/header/{{ strtolower(substr(env('SALESPERSON_FIRSTNAME'), 0, 1) . env('SALESPERSON_SURNAME')) }}header.png">
                             </div>
 
-                            <p class="mb-4">Dear @if($recipient_name){{ $recipient_name }},@endif</p>
+                            <p class="mb-4">Hi @if($recipient_name){{ $recipient_name }},@endif</p>
 
-                            <p class="mb-4">Please click the button below to order your personalised samples.</p>
+                            <p class="mb-4">Hope you are well! I know you will get hundreds of emails trying to sell you merchandise and branded items but we are different... No really, we are! I want to stand out more than anyone else who might get in touch so I've had this web shop made especially for you to grab a free personalised notebook... from me. Its dead easy just click away and I'll get you one sent out in no time. Who doesn't love a freebie?</p>
 
                             <div class="mb-4">
                                 <label for="optional_message" class="sr-only">Optional Message</label>
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="flex justify-center mb-8">
-                                <span class="rounded px-3 py-2 bg-gray-900 text-white cursor-pointer">Visit the site</span>
+                                <span class="rounded px-6 py-4 bg-pink-600 text-white font-bold text-lg cursor-pointer">Click here, claim now...</span>
                             </div>
 
                             <p class="mb-4">Kind regards,</p>

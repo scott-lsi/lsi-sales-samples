@@ -100,7 +100,8 @@ class Show extends Component
         $this->basket = Basket::content();
 
         $this->thanks = '<h1 class="text-3xl mt-4 mb-8">Thank You!</h1>';
-        $this->thanks .= '<p>Your order has been stored for approval.</p>';
+        $this->thanks .= '<p class="mb-4">How easy was that? I\'ll get this sent out for you in the next few days and be in touch to make sure you got it.</p>';
+        $this->thanks .= '<p class="mb-4">In the meantime if you want to have a nosey around at who we are <a href="https://www.lsi.co.uk">this is a link to our website</a>.</p>';
 
         Mail::to(env('SALESPERSON_EMAIL'))
             ->send(new OrderPlaced($order));
