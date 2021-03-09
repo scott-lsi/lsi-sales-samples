@@ -29,7 +29,7 @@ class Create extends Component
         // validate on update
         $this->validateOnly($field, [
             'recipient_name' => 'required',
-            'recipient_email_address' => 'required',
+            'recipient_email_address' => 'email|required',
         ]);
     }
 
