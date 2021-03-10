@@ -41,7 +41,7 @@
 
                             <p class="mb-4">Hi @if($recipient_name){{ $recipient_name }},@endif</p>
 
-                            <p class="mb-4">Hope you are well! I know you will get hundreds of emails trying to sell you merchandise and branded items but we are different... No really, we are!</p>
+                            <p class="mb-4">Hope you are well! I know you will get loads of emails trying to sell you merchandise and branded items and yes the majority of merchandise suppliers are the same. However, we are different... No really, we are!</p>
 
                             <div class="mb-4">
                                 <label for="optional_message" class="sr-only">Optional Message</label>
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="flex justify-center mb-8">
-                                <span class="rounded px-6 py-4 bg-pink-600 text-white font-bold text-lg cursor-pointer">Click here, claim now...</span>
+                                <span class="rounded px-6 py-4 bg-pink-600 text-white font-bold text-lg cursor-pointer">Let me prove it!</span>
                             </div>
 
                             <p class="mb-4">Kind regards,</p>

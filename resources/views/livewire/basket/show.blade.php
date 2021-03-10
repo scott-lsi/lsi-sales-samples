@@ -93,15 +93,15 @@
             @else
                 <h1 class="text-3xl mt-4 mb-8">Thank You!</h1>
 
-                <p class="my-8">How easy was that? I'll get this sent out for you in the next few days and be in touch to make sure you got it.</p>
+                <p class="my-8">How easy was that? Now how many other companies "like us" are offering to send out free personalised products and how many of them are doing it like this with a bespoke webshop&hellip;</p>
+                <p class="my-8">The purpose of this was to hopefully show you how we are different. I know there are a lot of similar companies out there but we take pride in going above and beyond for what we do and that goes for your brand as well.</p>
+                <p class="my-8">We are not just a catalogue or an online site... We are real people who you can have a real chat with and we really love what we do!</p>
 
                 <hr class="mb-8">
 
                 <h2 class="text-2xl mb-8">What we do</h2>
 
-                <p class="text-xl mb-4">The reason I want to physically send something out for you is to try and show how we are different from the rest!</p>
-                <p class="text-xl mb-4">We are not just a catalogue or an online site... we are real people who you can have a real conversation with and love a real cuppa!</p>
-                <p class="text-xl mb-4">We offer so much more than just branded items, here's a few links to what we are all about</p>
+                <p class="text-xl mb-4">At LSi, we firmly believe in the saying 'People buy from People'. We don't hide behind a website, offering weird and wonderful pricing. Instead, we take pride in engaging on a one-to-one basis – working closely with you to understand your brand and provide merchandise ideas that work! Anybody can sell you a pen or a t-shirt, at LSi, we offer proven merchandise solutions that help grow your business. Have a nosey&hellip;</p>
 
                 <a href="https://www.lsi.co.uk"><img src="{{ asset('images/heroes.jpg') }}" alt="LSi Promotional Heroes"></a>
 

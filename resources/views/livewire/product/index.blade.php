@@ -13,8 +13,9 @@
                 </div>
 
                 <div class="col-span-6 md:col-span-4 order-1 md:order-none">
-                    <h1 class="text-3xl mt-4 mb-8 text-center">Welcome to my free, intro sample site</h1>
-                    <p class="text-2xl text-center mt-4 mb-8">In just 3 more clicks you will have a personalised notebook on its way to you wherever you want... who doesn't love a freebie?</p>
+                    <h1 class="text-3xl mt-4 mb-8 text-center">Welcome to my Intro website!</h1>
+                    <p class="text-2xl text-center mt-4 mb-8">Instead of just a brochure through the post, I would like to send you a free personalised notebook and in just a few more clicks it will be on its way to you&hellip; Who doesn't love a freebie?</p>
+                    <p class="text-2xl text-center mt-4 mb-8">Select a design you like below</p>
                 </div>
                 
                 <div class="col-span-3 order-3 md:col-span-1 md:order-none">

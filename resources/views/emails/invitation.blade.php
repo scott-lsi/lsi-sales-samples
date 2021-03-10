@@ -1,12 +1,12 @@
 @component('mail::message')
 Hi {{ $recipient_name }},
 
-Hope you are well! I know you will get hundreds of emails trying to sell you merchandise and branded items but we are different... No really, we are!
+Hope you are well! I know you will get loads of emails trying to sell you merchandise and branded items and yes the majority of merchandise suppliers are the same. However, we are different... No really, we are!
 
 {{ $optional_message }}
 
 @component('mail::button', ['url' => route('token.store_to_session', $token)])
-Click here, claim now...
+Let me prove it!
 @endcomponent
 
 Kind regards,
