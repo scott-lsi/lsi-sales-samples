@@ -15,6 +15,7 @@ use App\Mail\OrderPlaced;
 class Show extends Component
 {
     public $basket;
+    public $total_quantity;
     public $total;
     public $tax;
     public $subtotal;
@@ -33,6 +34,7 @@ class Show extends Component
     public function basketUpdate($message)
     {
         $this->basket = Basket::content()->toArray();
+        $this->total_quantity = Basket::count();
         $this->total = Basket::total();
         $this->tax = Basket::tax();
         $this->subtotal = Basket::subtotal();
@@ -44,6 +46,7 @@ class Show extends Component
     public function mount()
     {
         $this->basket = Basket::content()->toArray();
+        $this->total_quantity = Basket::count();
         $this->total = Basket::total();
         $this->tax = Basket::tax();
         $this->subtotal = Basket::subtotal();

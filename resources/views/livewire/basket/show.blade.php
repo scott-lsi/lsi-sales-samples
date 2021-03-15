@@ -11,6 +11,10 @@
                         <div class="col-span-3">
                             <h1 class="text-3xl mt-4 mb-8">Basket</h1>
 
+                            @if($total_quantity > 1)
+                                <x-info-box class="mb-4">You may only order 1 item. Please adjust your quantity or remove items from your basket</x-info-box>
+                            @endif
+
                             <table class="w-full mb-4">
                                 <thead>
                                     <tr class="border-b border-gray-200">
@@ -81,7 +85,9 @@
                                     <x-jet-input-error for="address_postcode" class="mt-2" />
                                 </div>
 
-                                <x-jet-button class="w-full">Submit</x-jet-button>
+                                @if($total_quantity === 1)
+                                    <x-jet-button class="w-full" disabled="disabled">Submit</x-jet-button>
+                                @endif
                             </form>
                         </div>
                     </div>
