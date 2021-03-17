@@ -86,7 +86,7 @@
                                 </div>
 
                                 @if($total_quantity === 1)
-                                    <x-jet-button class="w-full" disabled="disabled">Submit</x-jet-button>
+                                    <x-jet-button class="w-full">Submit</x-jet-button>
                                 @endif
                             </form>
                         </div>
