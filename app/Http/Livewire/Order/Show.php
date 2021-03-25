@@ -20,8 +20,8 @@ class Show extends Component
 
     public function submit()
     {
-        //$gateway_data = $this->gatewayPrepare($this->order->basket_content);
-        //$this->gatewaySend($gateway_data);
+        $gateway_data = $this->gatewayPrepare($this->order->basket_content);
+        $this->gatewaySend($gateway_data);
 
         $this->order->update([
             'submitted_to_gateway' => 1,
